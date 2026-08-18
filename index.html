@@ -486,7 +486,7 @@
         .cert-header h2 {
             font-family: 'Cinzel', serif;
             color: #1e3a8a;
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 800;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -610,7 +610,7 @@
 
         .lc-header h2 {
             font-family: 'Cinzel', serif;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 800;
             color: #0f172a;
         }
@@ -718,6 +718,167 @@
             transform: translateY(0);
             opacity: 1;
         }
+
+        /* ==========================================================================
+           7. MOBILE RESPONSIVE STYLESHEET (Non-destructive)
+           ========================================================================== */
+        @media screen and (max-width: 768px) {
+            header.admin-header {
+                padding: 12px 16px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .brand-title h1 {
+                font-size: 14px;
+            }
+
+            .user-info {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .admin-container {
+                flex-direction: column;
+            }
+
+            aside.sidebar {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: auto;
+                padding: 10px 12px;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                gap: 8px;
+                white-space: nowrap;
+                background: #ffffff;
+                position: sticky;
+                top: 0;
+                z-index: 10;
+            }
+
+            .nav-item {
+                padding: 8px 14px;
+                font-size: 13px;
+                border-left: none;
+                border-bottom: 3px solid transparent;
+                border-radius: var(--radius-md);
+                flex-shrink: 0;
+            }
+
+            .nav-item.active {
+                border-left: none;
+                border-bottom: 3px solid var(--primary);
+            }
+
+            main.main-content {
+                padding: 16px 12px;
+            }
+
+            .page-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .page-header .form-control {
+                width: 100% !important;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .cert-selector-card {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cert-selector-card select {
+                max-width: 100% !important;
+            }
+
+            .cert-wrapper {
+                padding: 16px 8px;
+            }
+
+            .bonafide-box {
+                padding: 24px 18px;
+                border-width: 6px;
+            }
+
+            .cert-header h2 {
+                font-size: 17px;
+            }
+
+            .cert-badge-title h3 {
+                font-size: 16px;
+                padding: 4px 14px;
+            }
+
+            .cert-meta-row {
+                flex-direction: column;
+                gap: 6px;
+                margin-bottom: 20px;
+            }
+
+            .cert-body {
+                font-size: 15px;
+                line-height: 1.8;
+                margin-bottom: 30px;
+                text-align: left;
+            }
+
+            .cert-footer {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .sign-block {
+                width: 100%;
+            }
+
+            .sign-line {
+                margin-top: 30px;
+            }
+
+            .lc-box {
+                padding: 16px 10px;
+            }
+
+            .lc-inner-border {
+                padding: 12px 8px;
+            }
+
+            .lc-header h2 {
+                font-size: 16px;
+            }
+
+            .lc-table {
+                font-size: 11px;
+            }
+
+            .lc-table td.label-col {
+                width: 45%;
+                padding: 6px 8px;
+            }
+
+            .lc-table td.val-col {
+                padding: 6px 8px;
+            }
+
+            .card {
+                padding: 16px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -771,7 +932,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/>
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
                 </svg>
-                <h1>Dnyan, Kala, Krida and Krishi Prathisthan</h1>
+                <h1>DNYAN, KALA, KRIDA AND KRISHI PRATHISTHAN</h1>
             </div>
             <div class="user-info">
                 <span class="user-badge">👤 Logged in as: <strong>Admin</strong></span>
@@ -832,7 +993,7 @@
                             <div class="stat-icon green">🏛️</div>
                             <div class="stat-info">
                                 <h3>Active</h3>
-                                <p>School Portal Status</p>
+                                <p>College Portal Status</p>
                             </div>
                         </div>
                     </div>
@@ -911,7 +1072,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Class & Section *</label>
-                                    <input type="text" id="studentClass" class="form-control" required placeholder="e.g. 10th - Std A">
+                                    <input type="text" id="studentClass" class="form-control" required placeholder="e.g. FY B.Sc / 10th - Std A">
                                 </div>
                                 <div class="form-group">
                                     <label>Academic Year *</label>
@@ -930,7 +1091,7 @@
                                     <input type="date" id="admissionDate" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label>Date of Leaving School</label>
+                                    <label>Date of Leaving College</label>
                                     <input type="date" id="leavingDate" class="form-control">
                                 </div>
                                 <div class="form-group">
@@ -942,8 +1103,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group form-grid-full">
-                                    <label>Reason for Leaving School (For LC)</label>
-                                    <input type="text" id="reasonForLeaving" class="form-control" placeholder="e.g. Passed X Standard / Parent Transfer / Higher Studies">
+                                    <label>Reason for Leaving College (For LC)</label>
+                                    <input type="text" id="reasonForLeaving" class="form-control" placeholder="e.g. Completed Course / Parent Transfer / Higher Studies">
                                 </div>
                             </div>
 
@@ -1001,9 +1162,9 @@
                         <!-- Printable Bonafide Box -->
                         <div id="bonafideBox" class="bonafide-box">
                             <div class="cert-header">
-                                <h2>ST. XAVIER HIGH SCHOOL & JR. COLLEGE</h2>
-                                <p class="sub-title">Recognized by Maharashtra State Board of Secondary & Higher Secondary Education</p>
-                                <p class="address">Campus Rd, Academy Sector, City Centre - 400001 | Phone: (022) 2555-0199</p>
+                                <h2>DNYAN, KALA, KRIDA AND KRISHI PRATHISTHAN</h2>
+                                <p class="sub-title">Recognized by Govt. of Maharashtra & Board of Higher Education</p>
+                                <p class="address">A/P-Kalamb-Walchandnagar, Tal: Indapur, Dist: Pune, Maharashtra - 413114</p>
                             </div>
 
                             <div class="cert-badge-title">
@@ -1011,7 +1172,7 @@
                             </div>
 
                             <div class="cert-meta-row">
-                                <span>Ref No: <strong id="bon-ref-no">STX/BON/2026/102</strong></span>
+                                <span>Ref No: <strong id="bon-ref-no">DKKKP/BON/2026/102</strong></span>
                                 <span>Date: <strong id="bon-issue-date">18/08/2026</strong></span>
                             </div>
 
@@ -1034,14 +1195,14 @@
 
                             <div class="cert-footer">
                                 <div class="sign-block">
-                                    <div class="sign-line">Class Teacher</div>
+                                    <div class="sign-line">Class Teacher / Clerk</div>
                                 </div>
                                 <div class="official-stamp">
-                                    Official<br>School<br>Seal
+                                    Official<br>College<br>Seal
                                 </div>
                                 <div class="sign-block">
                                     <div style="font-family: 'Playfair Display', serif; font-style: italic; font-weight: 700; font-size: 18px; color: #1e3a8a; margin-bottom: -30px;">
-                                        Dr. A. K. D'Souza
+                                        Principal
                                     </div>
                                     <div class="sign-line">Principal Signature</div>
                                 </div>
@@ -1069,11 +1230,11 @@
                         <div id="lcBox" class="lc-box">
                             <div class="lc-inner-border">
                                 <div class="lc-header">
-                                    <h2>ST. XAVIER HIGH SCHOOL & JUNIOR COLLEGE</h2>
-                                    <p>Affiliated to State Board | U-DISE Code: 27240501102 | School Index No: S-16.02.044</p>
+                                    <h2>DNYAN, KALA, KRIDA AND KRISHI PRATHISTHAN</h2>
+                                    <p>A/P-Kalamb-Walchandnagar, Tal: Indapur, Dist: Pune, Maharashtra - 413114</p>
                                 </div>
 
-                                <div class="lc-title">SCHOOL LEAVING CERTIFICATE (TC)</div>
+                                <div class="lc-title">COLLEGE LEAVING CERTIFICATE (TC)</div>
 
                                 <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; margin-bottom: 12px;">
                                     <span>Register Book No: <strong>04</strong></span>
@@ -1114,7 +1275,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="label-col">8. Date of Admission in School</td>
+                                        <td class="label-col">8. Date of Admission in Institution</td>
                                         <td class="val-col" id="lc-admission-date">10/06/2016</td>
                                     </tr>
                                     <tr>
@@ -1126,21 +1287,21 @@
                                         <td class="val-col" id="lc-conduct">Good</td>
                                     </tr>
                                     <tr>
-                                        <td class="label-col">11. Date of Leaving School</td>
+                                        <td class="label-col">11. Date of Leaving Institution</td>
                                         <td class="val-col" id="lc-leaving-date">31/03/2026</td>
                                     </tr>
                                     <tr>
-                                        <td class="label-col">12. Standard in which studying</td>
+                                        <td class="label-col">12. Standard / Course in which studying</td>
                                         <td class="val-col" id="lc-class">Class 10th - Std A</td>
                                     </tr>
                                     <tr>
-                                        <td class="label-col">13. Reason for Leaving School</td>
-                                        <td class="val-col" id="lc-reason">Completed X Standard Course</td>
+                                        <td class="label-col">13. Reason for Leaving Institution</td>
+                                        <td class="val-col" id="lc-reason">Completed Course</td>
                                     </tr>
                                 </table>
 
                                 <p style="font-size: 11px; font-weight: 600; text-align: center; margin: 16px 0;">
-                                    Certified that the above information is in accordance with the School General Register.
+                                    Certified that the above information is in accordance with the Institution General Register.
                                 </p>
 
                                 <div class="cert-footer" style="margin-top: 30px;">
@@ -1173,7 +1334,7 @@
          ========================================================================== -->
     <script>
         // Storage Key
-        const DB_KEY = 'st_xavier_students_db';
+        const DB_KEY = 'dkkkp_students_db';
 
         // Pre-populated Sample Data
         const defaultStudents = [
@@ -1185,14 +1346,14 @@
                 motherName: 'Sunita Sharma',
                 dob: '2010-05-15',
                 gender: 'Male',
-                studentClass: '10th - Std A',
+                studentClass: 'Class 10th - Std A',
                 academicYear: '2025-2026',
                 caste: 'Indian - General',
                 pob: 'Mumbai',
                 admissionDate: '2016-06-10',
                 leavingDate: '2026-03-31',
                 conduct: 'Good',
-                reasonForLeaving: 'Passed X Standard Board Examination'
+                reasonForLeaving: 'Passed Board Examination'
             },
             {
                 grNo: 'GR-102',
@@ -1202,7 +1363,7 @@
                 motherName: 'Meena Patel',
                 dob: '2010-09-22',
                 gender: 'Female',
-                studentClass: '10th - Std B',
+                studentClass: 'Class 10th - Std B',
                 academicYear: '2025-2026',
                 caste: 'Indian - OBC',
                 pob: 'Ahmedabad',
@@ -1219,14 +1380,14 @@
                 motherName: 'Priya Deshmukh',
                 dob: '2011-03-10',
                 gender: 'Male',
-                studentClass: '9th - Std A',
+                studentClass: 'Class 9th - Std A',
                 academicYear: '2025-2026',
                 caste: 'Indian - General',
                 pob: 'Pune',
                 admissionDate: '2017-06-15',
                 leavingDate: '2026-04-15',
                 conduct: 'Good',
-                reasonForLeaving: 'Higher Secondary Schooling'
+                reasonForLeaving: 'Higher Education'
             }
         ];
 
